@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[37,)"
+license="All rights reserved"
+[[mods]]
+modId="tutorialmod"
+version="1.17.1-0.1"
+displayName="Tutorial Mod"
+logoFile="Tutorial Mod"
+credits="Special thnx to all the guys who creating tutorials about modding and making modding for me possible..."
+authors="Def Daemon"
+description='''
+This mod is all about learning to mod in Minecraft 1.17
+'''
+
+[[dependencies.examplemod]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[37,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.17.1,1.18)"
+    ordering="NONE"
+    side="BOTH"
