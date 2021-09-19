@@ -4,5 +4,7 @@
   "block.tutorialmod.firestone_block": "Firestone Block",
   "block.tutorialmod.amethyst_ore": "Amethyst Ore",
   "block.tutorialmod.amethyst_block": "Amethyst Block",
-  "itemGroup.tutorialModTab": "Tutorial Mod Tab"
+  "itemGroup.tutorialModTab": "Tutorial Mod Tab",
+  "tooltip.firestone": "Hold \u00A7eSHIFT\u00A7r for more information!",
+  "tooltip.firestone_shift": "Might set you on fire. But also might protect you from it!"
 }
