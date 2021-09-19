@@ -1,5 +1,6 @@
 package com.defdaemon.tutorialmod.common.items;
 
+import com.defdaemon.tutorialmod.core.util.ModTags;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
@@ -86,7 +87,7 @@ public class Firestone extends Item
 
     private boolean BlockIsValidForResistance(BlockState clickedBlock)
     {
-        return clickedBlock.getBlock() == Blocks.OBSIDIAN;
+        return clickedBlock.is(ModTags.FIRESTONE_CLICKABLE_BLOCKS);
     }
 
     public static void lightEntityOnFire(Entity entity, int seconds)
