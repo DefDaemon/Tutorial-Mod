@@ -1,6 +1,7 @@
 {
   "item.tutorialmod.amethyst": "Amethyst",
   "item.tutorialmod.firestone": "Firestone",
+  "block.tutorialmod.firestone_block": "Firestone Block",
   "block.tutorialmod.amethyst_ore": "Amethyst Ore",
   "block.tutorialmod.amethyst_block": "Amethyst Block",
   "itemGroup.tutorialModTab": "Tutorial Mod Tab"

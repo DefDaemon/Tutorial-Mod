@@ -1,6 +1,7 @@
 package com.defdaemon.tutorialmod.core.init;
 
 import com.defdaemon.tutorialmod.TutorialMod;
+import com.defdaemon.tutorialmod.common.blocks.FirestoneBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -23,6 +24,7 @@ public class ModBlocks
 
     public static final RegistryObject<Block> AMETHYST_BLOCK = registerBlock("amethyst_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(8f).sound(SoundType.STONE)), ModItemGroup.TUTORIAL_GROUP);
 
+    public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block", () -> new FirestoneBlock(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(6f).sound(SoundType.METAL)), ModItemGroup.TUTORIAL_GROUP);
 
 
 
