@@ -2,6 +2,9 @@ package com.defdaemon.tutorialmod;
 
 import com.defdaemon.tutorialmod.core.init.ModBlocks;
 import com.defdaemon.tutorialmod.core.init.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.block.ModelBlockRenderer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -44,7 +47,10 @@ public class TutorialMod
 
     private void doClientStuff(final FMLClientSetupEvent event)
     {
-
+        event.enqueueWork(() -> {
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.AMETHYST_DOOR.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.AMETHYST_TRAPDOOR.get(), RenderType.cutout());
+        });
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
