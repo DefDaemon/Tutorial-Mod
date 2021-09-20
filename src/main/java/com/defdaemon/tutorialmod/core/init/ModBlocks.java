@@ -1,7 +1,9 @@
 package com.defdaemon.tutorialmod.core.init;
 
 import com.defdaemon.tutorialmod.TutorialMod;
-import com.defdaemon.tutorialmod.common.blocks.FirestoneBlock;
+import com.defdaemon.tutorialmod.common.block.FirestoneBlock;
+import com.defdaemon.tutorialmod.common.block.OatsBlock;
+import com.defdaemon.tutorialmod.core.itemgroup.ModItemGroup;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -41,6 +43,7 @@ public class ModBlocks
 
     public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block", () -> new FirestoneBlock(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(6f).sound(SoundType.METAL)), ModItemGroup.TUTORIAL_GROUP);
 
+    public static final RegistryObject<Block> OATS = BLOCKS.register("oats_crop", () -> new OatsBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().instabreak().sound(SoundType.CROP)));
 
 
     // Register helper functions

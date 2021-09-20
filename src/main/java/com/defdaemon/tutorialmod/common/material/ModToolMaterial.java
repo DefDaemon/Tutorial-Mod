@@ -1,11 +1,12 @@
-package com.defdaemon.tutorialmod.core.init;
+package com.defdaemon.tutorialmod.common.material;
 
+import com.defdaemon.tutorialmod.core.init.ModItems;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum ModItemTier implements Tier {
+public enum ModToolMaterial implements Tier {
 
     AMETHYST(3, 150, 4f, 12f, 10, () -> Ingredient.of(ModItems.AMETHYST.get()));
 
@@ -16,7 +17,8 @@ public enum ModItemTier implements Tier {
     private final int enchantability;
     private final Supplier<Ingredient> repairMaterial;
 
-    ModItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial) {
+    ModToolMaterial(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial)
+    {
         this.harvestLevel = harvestLevel;
         this.maxUses = maxUses;
         this.efficiency = efficiency;

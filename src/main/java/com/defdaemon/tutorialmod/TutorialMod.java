@@ -50,6 +50,7 @@ public class TutorialMod
         event.enqueueWork(() -> {
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.AMETHYST_DOOR.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.AMETHYST_TRAPDOOR.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.OATS.get(), RenderType.cutout());
         });
     }
 

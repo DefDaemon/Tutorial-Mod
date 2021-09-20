@@ -1,5 +1,6 @@
-package com.defdaemon.tutorialmod.core.init;
+package com.defdaemon.tutorialmod.core.itemgroup;
 
+import com.defdaemon.tutorialmod.core.init.ModItems;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTab;
 

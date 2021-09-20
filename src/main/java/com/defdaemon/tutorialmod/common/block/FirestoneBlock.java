@@ -1,6 +1,6 @@
-package com.defdaemon.tutorialmod.common.blocks;
+package com.defdaemon.tutorialmod.common.block;
 
-import com.defdaemon.tutorialmod.common.items.Firestone;
+import com.defdaemon.tutorialmod.common.item.Firestone;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;

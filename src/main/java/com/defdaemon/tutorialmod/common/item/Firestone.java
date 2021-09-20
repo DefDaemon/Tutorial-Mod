@@ -1,4 +1,4 @@
-package com.defdaemon.tutorialmod.common.items;
+package com.defdaemon.tutorialmod.common.item;
 
 import com.defdaemon.tutorialmod.core.util.ModTags;
 import net.minecraft.advancements.CriteriaTriggers;

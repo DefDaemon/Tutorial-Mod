@@ -1,6 +1,7 @@
-package com.defdaemon.tutorialmod.core.init;
+package com.defdaemon.tutorialmod.common.material;
 
 import com.defdaemon.tutorialmod.TutorialMod;
+import com.defdaemon.tutorialmod.core.init.ModItems;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
