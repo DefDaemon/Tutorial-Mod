@@ -4,6 +4,7 @@ import com.defdaemon.tutorialmod.TutorialMod;
 import com.defdaemon.tutorialmod.common.block.FirestoneBlock;
 import com.defdaemon.tutorialmod.common.block.HappyCropBlock;
 import com.defdaemon.tutorialmod.common.block.OatsBlock;
+import com.defdaemon.tutorialmod.common.block.RedwoodTreeGrower;
 import com.defdaemon.tutorialmod.core.itemgroup.ModItemGroup;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -57,6 +58,10 @@ public class ModBlocks
     public static final RegistryObject<Block> STRIPPED_REDWOOD_WOOD = registerBlock("stripped_redwood_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), ModItemGroup.TUTORIAL_GROUP);
 
     public static final RegistryObject<Block> REDWOOD_PLANKS = registerBlock("redwood_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), ModItemGroup.TUTORIAL_GROUP);
+
+    public static final RegistryObject<Block> REDWOOD_LEAVES = registerBlock("redwood_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2f).randomTicks().sound(SoundType.WOOD).noOcclusion()), ModItemGroup.TUTORIAL_GROUP);
+
+    public static final RegistryObject<Block> REDWOOD_SAPLING = registerBlock("redwood_sapling", () -> new SaplingBlock(new RedwoodTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModItemGroup.TUTORIAL_GROUP);
 
 
     // Register helper functions
