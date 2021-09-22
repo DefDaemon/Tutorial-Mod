@@ -5,6 +5,8 @@ import com.defdaemon.tutorialmod.common.item.Firestone;
 import com.defdaemon.tutorialmod.common.material.ModArmorMaterial;
 import com.defdaemon.tutorialmod.common.material.ModToolMaterial;
 import com.defdaemon.tutorialmod.core.itemgroup.ModItemGroup;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
@@ -45,6 +47,14 @@ public class ModItems
 
     public static final RegistryObject<Item> OATS = ITEMS.register("oats", () -> new ItemNameBlockItem(ModBlocks.OATS.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationMod(0.1f).fast().build()).tab(ModItemGroup.TUTORIAL_GROUP)));
 
+    public static final RegistryObject<Item> HAPPY_LEAVES = ITEMS.register("happy_leaves", () -> new ItemNameBlockItem(ModBlocks.HAPPY_CROP.get(), new Item.Properties().tab(ModItemGroup.TUTORIAL_GROUP)));
+
+    public static final RegistryObject<Item> HAPPY_STUFF = ITEMS.register("happy_stuff", () -> new Item(new Item.Properties().tab(ModItemGroup.TUTORIAL_GROUP)));
+
+    public static final RegistryObject<Item> HAPPY_COOKIE = ITEMS.register("happy_cookie", () -> new Item(new Item.Properties().food(new FoodProperties.Builder().effect(() -> new MobEffectInstance(MobEffects.CONFUSION), 1.0f).effect(() -> new MobEffectInstance(MobEffects.GLOWING), 1.0f).effect(() -> new MobEffectInstance(MobEffects.LEVITATION), 1.0f).nutrition(1).saturationMod(0.1f).fast().build()).tab(ModItemGroup.TUTORIAL_GROUP)));
+
+
+    //Helper function
     public static void register(IEventBus eventBus)
     {
         ITEMS.register(eventBus);

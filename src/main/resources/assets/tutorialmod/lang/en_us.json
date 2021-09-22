@@ -23,6 +23,17 @@
   "block.tutorialmod.amethyst_stairs": "Amethyst Stairs",
   "block.tutorialmod.amethyst_trap_door": "Amethyst Trap Door",
   "block.tutorialmod.oats_crop": "Oats",
+  "block.tutorialmod.redwood_log": "Redwood Log",
+  "block.tutorialmod.redwood_planks": "Redwood Planks",
+  "block.tutorialmod.redwood_wood": "Redwood Wood",
+  "block.tutorialmod.stripped_redwood_log": "Stripped Redwood Log",
+  "block.tutorialmod.stripped_redwood_wood": "Stripped Redwood Wood",
+  "block.tutorialmod.happy_crop": "Happy Crop",
+  "item.tutorialmod.happy_leaves": "Happy Leaves",
+  "item.tutorialmod.happy_stuff": "Happy Stuff",
+  "item.tutorialmod.happy_cookie": "Happy Cookie",
+
+
   "itemGroup.tutorialModTab": "Tutorial Mod Tab",
   "tooltip.firestone": "Hold \u00A7eSHIFT\u00A7r for more information!",
   "tooltip.firestone_shift": "Might set you on fire. But also might protect you from it!"

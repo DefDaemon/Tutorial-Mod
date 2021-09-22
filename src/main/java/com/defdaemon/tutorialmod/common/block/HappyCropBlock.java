@@ -1,8 +1,8 @@
 package com.defdaemon.tutorialmod.common.block;
 
-import com.defdaemon.tutorialmod.core.init.ModBlocks;
 import com.defdaemon.tutorialmod.core.init.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -11,7 +11,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class OatsBlock extends CropBlock
+
+public class HappyCropBlock extends CropBlock
 {
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]
     {
@@ -25,15 +26,14 @@ public class OatsBlock extends CropBlock
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)
     };
 
-
-    public OatsBlock(Properties properties) {
+    public HappyCropBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(this.getAgeProperty(), Integer.valueOf(0)));
     }
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModBlocks.HAPPY_CROP.get();
+        return ModItems.HAPPY_LEAVES.get();
     }
 
     @Override

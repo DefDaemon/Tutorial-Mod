@@ -2,6 +2,7 @@ package com.defdaemon.tutorialmod.core.init;
 
 import com.defdaemon.tutorialmod.TutorialMod;
 import com.defdaemon.tutorialmod.common.block.FirestoneBlock;
+import com.defdaemon.tutorialmod.common.block.HappyCropBlock;
 import com.defdaemon.tutorialmod.common.block.OatsBlock;
 import com.defdaemon.tutorialmod.core.itemgroup.ModItemGroup;
 import net.minecraft.world.item.BlockItem;
@@ -44,6 +45,18 @@ public class ModBlocks
     public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block", () -> new FirestoneBlock(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(6f).sound(SoundType.METAL)), ModItemGroup.TUTORIAL_GROUP);
 
     public static final RegistryObject<Block> OATS = BLOCKS.register("oats_crop", () -> new OatsBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().instabreak().sound(SoundType.CROP)));
+
+    public static final RegistryObject<Block> HAPPY_CROP = BLOCKS.register("happy_crop", () -> new HappyCropBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().instabreak().sound(SoundType.CROP)));
+
+    public static final RegistryObject<Block> REDWOOD_LOG = registerBlock("redwood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), ModItemGroup.TUTORIAL_GROUP);
+
+    public static final RegistryObject<Block> REDWOOD_WOOD = registerBlock("redwood_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), ModItemGroup.TUTORIAL_GROUP);
+
+    public static final RegistryObject<Block> STRIPPED_REDWOOD_LOG = registerBlock("stripped_redwood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), ModItemGroup.TUTORIAL_GROUP);
+
+    public static final RegistryObject<Block> STRIPPED_REDWOOD_WOOD = registerBlock("stripped_redwood_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), ModItemGroup.TUTORIAL_GROUP);
+
+    public static final RegistryObject<Block> REDWOOD_PLANKS = registerBlock("redwood_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), ModItemGroup.TUTORIAL_GROUP);
 
 
     // Register helper functions
