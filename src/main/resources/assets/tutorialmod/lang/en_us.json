@@ -23,6 +23,7 @@
   "block.tutorialmod.amethyst_stairs": "Amethyst Stairs",
   "block.tutorialmod.amethyst_trap_door": "Amethyst Trap Door",
   "block.tutorialmod.oats_crop": "Oats",
+  "item.tutorialmod.oats": "Oats",
   "block.tutorialmod.redwood_log": "Redwood Log",
   "block.tutorialmod.redwood_planks": "Redwood Planks",
   "block.tutorialmod.redwood_wood": "Redwood Wood",
@@ -30,8 +31,14 @@
   "block.tutorialmod.stripped_redwood_wood": "Stripped Redwood Wood",
   "block.tutorialmod.redwood_sapling": "Redwood Sapling",
   "block.tutorialmod.redwood_leaves": "Redwood Leaves",
+  "block.tutorialmod.happy_crop": "Happy Crop",
+  "item.tutorialmod.happy_seeds": "Happy Seeds",
+  "item.tutorialmod.happy_crop": "Happy Leaves",
 
   "itemGroup.tutorialModTab": "Tutorial Mod Tab",
   "tooltip.firestone": "Hold \u00A7eSHIFT\u00A7r for more information!",
-  "tooltip.firestone_shift": "Might set you on fire. But also might protect you from it!"
+  "tooltip.firestone_shift": "Might set you on fire. But also might protect you from it!",
+  "commands.home.set.success": "Set Home at %s",
+  "commands.home.return.failure": "No Home Position has been set !",
+  "commands.home.return.success": "Player returned Home!"
 }

@@ -33,7 +33,7 @@ public class OatsBlock extends CropBlock
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModBlocks.HAPPY_CROP.get();
+        return ModBlocks.OATS.get();
     }
 
     @Override

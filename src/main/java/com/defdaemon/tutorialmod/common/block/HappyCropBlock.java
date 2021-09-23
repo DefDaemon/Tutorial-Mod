@@ -6,6 +6,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -33,7 +34,7 @@ public class HappyCropBlock extends CropBlock
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.HAPPY_LEAVES.get();
+        return ModItems.HAPPY_SEEDS.get();
     }
 
     @Override

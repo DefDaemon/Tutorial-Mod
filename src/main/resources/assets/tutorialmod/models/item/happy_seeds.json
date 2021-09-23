@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tutorialmod:item/happy_leaves"
+    "layer0": "tutorialmod:item/happy_seeds"
   }
 }
