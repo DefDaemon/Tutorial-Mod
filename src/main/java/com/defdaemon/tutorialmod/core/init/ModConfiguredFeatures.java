@@ -6,6 +6,7 @@ import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
@@ -22,8 +23,6 @@ public class ModConfiguredFeatures
                     new SimpleStateProvider(ModBlocks.REDWOOD_SAPLING.get().defaultBlockState()),
                     new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                     new TwoLayersFeatureSize(1, 0, 1))).ignoreVines().build()));
-
-
 
     private static <FC extends FeatureConfiguration> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
         return Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, key, configuredFeature);
