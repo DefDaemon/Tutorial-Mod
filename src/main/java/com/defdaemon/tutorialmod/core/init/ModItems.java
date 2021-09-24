@@ -25,7 +25,7 @@ public class ModItems
 
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", () -> new Item(new Item.Properties().tab(ModItemGroup.TUTORIAL_GROUP)));
 
-    public static final RegistryObject<Item> FIRESTONE = ITEMS.register("firestone", () -> new Firestone(new Item.Properties().tab(ModItemGroup.TUTORIAL_GROUP)));
+    public static final RegistryObject<Item> FIRESTONE = ITEMS.register("firestone", () -> new Firestone(new Item.Properties().durability(8).tab(ModItemGroup.TUTORIAL_GROUP)));
 
     public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword", () -> new SwordItem(ModToolMaterial.AMETHYST, 2, 3f, new Item.Properties().tab(ModItemGroup.TUTORIAL_GROUP)));
 
