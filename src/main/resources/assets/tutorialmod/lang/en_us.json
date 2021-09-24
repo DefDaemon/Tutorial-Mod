@@ -31,9 +31,11 @@
   "block.tutorialmod.stripped_redwood_wood": "Stripped Redwood Wood",
   "block.tutorialmod.redwood_sapling": "Redwood Sapling",
   "block.tutorialmod.redwood_leaves": "Redwood Leaves",
-  "block.tutorialmod.happy_crop": "Happy Crop",
+  "item.tutorialmod.happy_crop": "Happy Crop",
   "item.tutorialmod.happy_seeds": "Happy Seeds",
-  "item.tutorialmod.happy_crop": "Happy Leaves",
+  "item.tutorialmod.happy_stuff": "Happy Stuff",
+  "item.tutorialmod.happy_cookie": "Happy Cookie",
+  "block.tutorialmod.hyacinth": "Hyacinth",
 
   "itemGroup.tutorialModTab": "Tutorial Mod Tab",
   "tooltip.firestone": "Hold \u00A7eSHIFT\u00A7r for more information!",

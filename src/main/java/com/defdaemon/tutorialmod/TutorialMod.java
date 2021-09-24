@@ -58,6 +58,7 @@ public class TutorialMod
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.HAPPY_CROP.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.REDWOOD_LEAVES.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.REDWOOD_SAPLING.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.HYACINTH.get(), RenderType.cutout());
         });
     }
 

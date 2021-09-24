@@ -1,6 +1,7 @@
 package com.defdaemon.tutorialmod.core.world;
 
 import com.defdaemon.tutorialmod.TutorialMod;
+import com.defdaemon.tutorialmod.core.world.gen.ModFlowerGeneration;
 import com.defdaemon.tutorialmod.core.world.gen.ModOreGeneration;
 import com.defdaemon.tutorialmod.core.world.gen.ModTreeGeneration;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
@@ -14,6 +15,7 @@ public class ModWorldEvents {
     public static void biomeLoadingEvent(final BiomeLoadingEvent event)
     {
         ModOreGeneration.generateOres(event);
+        ModFlowerGeneration.generateFlowers(event);
         ModTreeGeneration.generateTrees(event);
     }
 }

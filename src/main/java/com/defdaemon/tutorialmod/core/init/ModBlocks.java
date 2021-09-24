@@ -6,6 +6,9 @@ import com.defdaemon.tutorialmod.common.block.HappyCropBlock;
 import com.defdaemon.tutorialmod.common.block.OatsBlock;
 import com.defdaemon.tutorialmod.common.block.RedwoodTreeGrower;
 import com.defdaemon.tutorialmod.core.itemgroup.ModItemGroup;
+import com.mojang.blaze3d.shaders.Effect;
+import net.minecraft.client.renderer.EffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.animal.horse.Horse;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -15,6 +18,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -47,8 +51,6 @@ public class ModBlocks
 
     public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block", () -> new FirestoneBlock(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(6f).sound(SoundType.METAL)), ModItemGroup.TUTORIAL_GROUP);
 
-    public static final RegistryObject<Block> OATS = BLOCKS.register("oats_crop", () -> new OatsBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().instabreak().sound(SoundType.CROP)));
-
     public static final RegistryObject<Block> REDWOOD_LOG = registerBlock("redwood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), ModItemGroup.TUTORIAL_GROUP);
 
     public static final RegistryObject<Block> REDWOOD_WOOD = registerBlock("redwood_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), ModItemGroup.TUTORIAL_GROUP);
@@ -63,7 +65,12 @@ public class ModBlocks
 
     public static final RegistryObject<Block> REDWOOD_SAPLING = registerBlock("redwood_sapling", () -> new SaplingBlock(new RedwoodTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModItemGroup.TUTORIAL_GROUP);
 
+    public static final RegistryObject<Block> OATS = BLOCKS.register("oats_crop", () -> new OatsBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().instabreak().sound(SoundType.CROP)));
+
     public static final RegistryObject<Block> HAPPY_CROP = BLOCKS.register("happy_crop", () -> new HappyCropBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().instabreak().sound(SoundType.CROP)));
+
+    public static final RegistryObject<Block> HYACINTH = registerBlock("hyacinth", () -> new FlowerBlock(MobEffects.MOVEMENT_SPEED, 2, BlockBehaviour.Properties.copy(Blocks.DANDELION)), ModItemGroup.TUTORIAL_GROUP);
+
 
 
     // Register helper functions

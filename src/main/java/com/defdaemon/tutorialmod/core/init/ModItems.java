@@ -5,6 +5,7 @@ import com.defdaemon.tutorialmod.common.item.Firestone;
 import com.defdaemon.tutorialmod.common.material.ModArmorMaterial;
 import com.defdaemon.tutorialmod.common.material.ModToolMaterial;
 import com.defdaemon.tutorialmod.core.itemgroup.ModItemGroup;
+import net.minecraft.client.renderer.EffectInstance;
 import net.minecraft.commands.Commands;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -48,13 +49,16 @@ public class ModItems
 
     public static final RegistryObject<Item> OATS = ITEMS.register("oats", () -> new ItemNameBlockItem(ModBlocks.OATS.get(), new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationMod(0.1f).fast().build()).tab(ModItemGroup.TUTORIAL_GROUP)));
 
-    public static final RegistryObject<Item> HAPPY_SEEDS = ITEMS.register("happy_crop", () -> new ItemNameBlockItem(ModBlocks.HAPPY_CROP.get(), (new Item.Properties()).tab(ModItemGroup.TUTORIAL_GROUP)));
-
-    public static final RegistryObject<Item> HAPPY_LEAVES = ITEMS.register("happy_leaves", () -> new Item(new Item.Properties().tab(ModItemGroup.TUTORIAL_GROUP)));
-
+    public static final RegistryObject<Item> HAPPY_SEEDS = ITEMS.register("happy_seeds", () -> new ItemNameBlockItem(ModBlocks.HAPPY_CROP.get(), new Item.Properties().tab(ModItemGroup.TUTORIAL_GROUP)));
+    public static final RegistryObject<Item> HAPPY_CROP = ITEMS.register("happy_crop", () -> new Item(new Item.Properties().tab(ModItemGroup.TUTORIAL_GROUP)));
     public static final RegistryObject<Item> HAPPY_STUFF = ITEMS.register("happy_stuff", () -> new Item(new Item.Properties().tab(ModItemGroup.TUTORIAL_GROUP)));
+    public static final RegistryObject<Item> HAPPY_COOKIE = ITEMS.register("happy_cookie", () -> new Item(new Item.Properties().food(new FoodProperties.Builder().alwaysEat().fast()
+                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 200), 1.0f)
+                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200), 1.0f)
+                    .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 200), 1.0f)
+                    .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 200), 1.0f)
+                    .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 200), 1.0f).build()).tab(ModItemGroup.TUTORIAL_GROUP)));
 
-    public static final RegistryObject<Item> HAPPY_COOKIE = ITEMS.register("happy_cookie", () -> new Item(new Item.Properties().tab(ModItemGroup.TUTORIAL_GROUP)));
 
     //Helper function
     public static void register(IEventBus eventBus)
