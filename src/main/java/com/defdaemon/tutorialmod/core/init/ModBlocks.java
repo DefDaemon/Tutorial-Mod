@@ -1,24 +1,18 @@
 package com.defdaemon.tutorialmod.core.init;
 
 import com.defdaemon.tutorialmod.TutorialMod;
-import com.defdaemon.tutorialmod.common.block.FirestoneBlock;
-import com.defdaemon.tutorialmod.common.block.HappyCropBlock;
-import com.defdaemon.tutorialmod.common.block.OatsBlock;
-import com.defdaemon.tutorialmod.common.block.RedwoodTreeGrower;
+import com.defdaemon.tutorialmod.common.block.*;
+import com.defdaemon.tutorialmod.common.blockentity.LightningChannelerBE;
 import com.defdaemon.tutorialmod.core.itemgroup.ModItemGroup;
-import com.mojang.blaze3d.shaders.Effect;
-import net.minecraft.client.renderer.EffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.animal.horse.Horse;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.HorseArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -71,6 +65,7 @@ public class ModBlocks
 
     public static final RegistryObject<Block> HYACINTH = registerBlock("hyacinth", () -> new FlowerBlock(MobEffects.MOVEMENT_SPEED, 2, BlockBehaviour.Properties.copy(Blocks.DANDELION)), ModItemGroup.TUTORIAL_GROUP);
 
+    public static final RegistryObject<Block> LIGHTING_CHANNELER = registerBlock("lightning_channeler", () -> new LightningChannelerBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(2.0f)), ModItemGroup.TUTORIAL_GROUP);
 
 
     // Register helper functions

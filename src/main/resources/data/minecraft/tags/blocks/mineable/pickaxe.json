@@ -3,6 +3,7 @@
   "values": [
     "tutorialmod:amethyst_ore",
     "tutorialmod:amethyst_block",
-    "tutorialmod:firestone_block"
+    "tutorialmod:firestone_block",
+    "tutorialmod:lightning_channeler"
   ]
 }
