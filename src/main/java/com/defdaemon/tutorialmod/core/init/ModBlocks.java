@@ -2,14 +2,12 @@ package com.defdaemon.tutorialmod.core.init;
 
 import com.defdaemon.tutorialmod.TutorialMod;
 import com.defdaemon.tutorialmod.common.block.*;
-import com.defdaemon.tutorialmod.common.blockentity.LightningChannelerBE;
 import com.defdaemon.tutorialmod.core.itemgroup.ModItemGroup;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;

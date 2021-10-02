@@ -5,6 +5,7 @@ import com.defdaemon.tutorialmod.core.init.ModBlocks;
 import com.defdaemon.tutorialmod.core.init.ModContainers;
 import com.defdaemon.tutorialmod.core.init.ModItems;
 import com.defdaemon.tutorialmod.core.init.ModBlockEntities;
+import com.defdaemon.tutorialmod.core.world.structure.ModStructures;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -15,11 +16,13 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
+import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -27,11 +30,12 @@ import org.apache.logging.log4j.Logger;
 public class TutorialMod
 {
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "tutorialmod";
 
 
-    public TutorialMod() {
+    public TutorialMod()
+    {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
@@ -39,8 +43,20 @@ public class TutorialMod
         ModBlockEntities.register(eventBus);
         ModContainers.register(eventBus);
 
+        ModStructures.register(eventBus);
+        //ModFluids.register(eventBus);
+        //ModRecipeTypes.register(eventBus);
+        //ModSoundEvents.register(eventBus);
+
         eventBus.addListener(this::setup);
+        // Register the enqueueIMC method for modloading
+        eventBus.addListener(this::enqueueIMC);
+        // Register the processIMC method for modloading
+        eventBus.addListener(this::processIMC);
+        // Register the doClientStuff method for modloading
         eventBus.addListener(this::doClientStuff);
+
+        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -52,6 +68,7 @@ public class TutorialMod
                         .put(ModBlocks.REDWOOD_WOOD.get(), ModBlocks.STRIPPED_REDWOOD_WOOD.get()).build();
             MenuScreens.register(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(), LightningChannelerScreen::new);
         });
+        ModStructures.setupStructures();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event)
@@ -68,6 +85,16 @@ public class TutorialMod
         });
     }
 
+    private void enqueueIMC(final InterModEnqueueEvent event)
+    {
+
+    }
+
+    private void processIMC(final InterModProcessEvent event)
+    {
+
+    }
+
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
@@ -77,7 +104,7 @@ public class TutorialMod
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
     // Event bus for receiving Registry Events)
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
