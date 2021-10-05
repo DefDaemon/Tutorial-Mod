@@ -1,4 +1,4 @@
-package com.defdaemon.tutorialmod.core.world.gen;
+package com.defdaemon.tutorialmod.common.world.gen;
 
 import com.defdaemon.tutorialmod.core.init.ModBlocks;
 import net.minecraft.world.level.block.Block;

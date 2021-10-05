@@ -1,4 +1,4 @@
-package com.defdaemon.tutorialmod.core.world.structure.structures;
+package com.defdaemon.tutorialmod.common.world.structure.structures;
 
 import com.defdaemon.tutorialmod.TutorialMod;
 import com.google.common.collect.ImmutableList;

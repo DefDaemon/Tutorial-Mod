@@ -1,4 +1,4 @@
-package com.defdaemon.tutorialmod.common.commands;
+package com.defdaemon.tutorialmod.common.command;
 
 import com.defdaemon.tutorialmod.TutorialMod;
 import com.mojang.brigadier.CommandDispatcher;

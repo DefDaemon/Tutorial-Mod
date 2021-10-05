@@ -1,4 +1,4 @@
-package com.defdaemon.tutorialmod.core.world.gen;
+package com.defdaemon.tutorialmod.common.world.gen;
 
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;

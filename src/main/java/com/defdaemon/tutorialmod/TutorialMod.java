@@ -1,11 +1,8 @@
 package com.defdaemon.tutorialmod;
 
 import com.defdaemon.tutorialmod.client.screen.LightningChannelerScreen;
-import com.defdaemon.tutorialmod.core.init.ModBlocks;
-import com.defdaemon.tutorialmod.core.init.ModContainers;
-import com.defdaemon.tutorialmod.core.init.ModItems;
-import com.defdaemon.tutorialmod.core.init.ModBlockEntities;
-import com.defdaemon.tutorialmod.core.world.structure.ModStructures;
+import com.defdaemon.tutorialmod.core.init.*;
+import com.defdaemon.tutorialmod.common.world.structure.ModStructures;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -42,9 +39,8 @@ public class TutorialMod
         ModBlocks.register(eventBus);
         ModBlockEntities.register(eventBus);
         ModContainers.register(eventBus);
-
         ModStructures.register(eventBus);
-        //ModFluids.register(eventBus);
+        ModFluids.register(eventBus);
         //ModRecipeTypes.register(eventBus);
         //ModSoundEvents.register(eventBus);
 
@@ -82,6 +78,9 @@ public class TutorialMod
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.REDWOOD_SAPLING.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.HYACINTH.get(), RenderType.cutout());
             //ScreenManager.registerFactory(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(), LightningChannelerScreen::new);
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_FLUID.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_BLOCK.get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.cutout());
         });
     }
 

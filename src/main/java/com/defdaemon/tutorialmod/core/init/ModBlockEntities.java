@@ -14,7 +14,6 @@ public class ModBlockEntities {
 
     public static RegistryObject<BlockEntityType<LightningChannelerBE>> LIGHTNING_CHANNELER_BE = BLOCK_ENTITIES.register("lightning_channeler", () -> BlockEntityType.Builder.of(LightningChannelerBE::new, ModBlocks.LIGHTING_CHANNELER.get()).build(null));
 
-
     //Helper functions
     public static void register(IEventBus eventBus)
     {

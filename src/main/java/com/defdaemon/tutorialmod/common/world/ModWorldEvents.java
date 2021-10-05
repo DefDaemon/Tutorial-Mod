@@ -1,11 +1,11 @@
-package com.defdaemon.tutorialmod.core.world;
+package com.defdaemon.tutorialmod.common.world;
 
 import com.defdaemon.tutorialmod.TutorialMod;
-import com.defdaemon.tutorialmod.core.world.gen.ModFlowerGeneration;
-import com.defdaemon.tutorialmod.core.world.gen.ModOreGeneration;
-import com.defdaemon.tutorialmod.core.world.gen.ModStructureGeneration;
-import com.defdaemon.tutorialmod.core.world.gen.ModTreeGeneration;
-import com.defdaemon.tutorialmod.core.world.structure.ModStructures;
+import com.defdaemon.tutorialmod.common.world.gen.ModFlowerGeneration;
+import com.defdaemon.tutorialmod.common.world.gen.ModOreGeneration;
+import com.defdaemon.tutorialmod.common.world.gen.ModStructureGeneration;
+import com.defdaemon.tutorialmod.common.world.gen.ModTreeGeneration;
+import com.defdaemon.tutorialmod.common.world.structure.ModStructures;
 import com.mojang.serialization.Codec;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;

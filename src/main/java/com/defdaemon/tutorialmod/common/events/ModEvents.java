@@ -1,8 +1,8 @@
 package com.defdaemon.tutorialmod.common.events;
 
 import com.defdaemon.tutorialmod.TutorialMod;
-import com.defdaemon.tutorialmod.common.commands.ReturnHomeCommand;
-import com.defdaemon.tutorialmod.common.commands.SetHomeCommand;
+import com.defdaemon.tutorialmod.common.command.ReturnHomeCommand;
+import com.defdaemon.tutorialmod.common.command.SetHomeCommand;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
