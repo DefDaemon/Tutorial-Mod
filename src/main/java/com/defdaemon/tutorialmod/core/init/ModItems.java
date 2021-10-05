@@ -59,6 +59,8 @@ public class ModItems
                     .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 200), 1.0f)
                     .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 200), 1.0f).build()).tab(ModItemGroup.TUTORIAL_GROUP)));
 
+    //public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket", () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(), new Item.Properties().stacksTo(1).tab(ModItemGroup.TUTORIAL_GROUP)));
+
     public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket", () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(), new Item.Properties().stacksTo(1).tab(ModItemGroup.TUTORIAL_GROUP)));
 
     //Helper function
