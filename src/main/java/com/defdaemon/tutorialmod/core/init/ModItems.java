@@ -83,6 +83,8 @@ public class ModItems
     public static final RegistryObject<ForgeSpawnEggItem> PIGEON_SPAWN_EGG = ITEMS.register("pigeon_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.PIGEON, 0x879995, 0x576ABC, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(16)));
 
+    public static final RegistryObject<Item> KAUPENBOW = ITEMS.register("kaupenbow", () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
+
 
     //Helper function
     public static void register(IEventBus eventBus)

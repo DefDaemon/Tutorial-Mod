@@ -6,6 +6,7 @@ import com.defdaemon.tutorialmod.core.init.*;
 import com.defdaemon.tutorialmod.client.screen.LightningChannelerScreen;
 import com.defdaemon.tutorialmod.common.world.structures.ModStructures;
 import com.defdaemon.tutorialmod.common.recipe.ModRecipeTypes;
+import com.defdaemon.tutorialmod.core.util.ModItemModelProperties;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -84,6 +85,7 @@ public class TutorialMod
 //            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_FLUID.get(), RenderType.translucent());
 //            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_BLOCK.get(), RenderType.translucent());
 //            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.translucent());
+            ModItemModelProperties.makeBow(ModItems.KAUPENBOW.get());
         });
     }
 
