@@ -1,11 +1,8 @@
 package com.defdaemon.tutorialmod.common.world;
 
 import com.defdaemon.tutorialmod.TutorialMod;
-import com.defdaemon.tutorialmod.common.world.gen.ModFlowerGeneration;
-import com.defdaemon.tutorialmod.common.world.gen.ModOreGeneration;
-import com.defdaemon.tutorialmod.common.world.gen.ModStructureGeneration;
-import com.defdaemon.tutorialmod.common.world.gen.ModTreeGeneration;
-import com.defdaemon.tutorialmod.common.world.structure.ModStructures;
+import com.defdaemon.tutorialmod.common.world.gen.*;
+import com.defdaemon.tutorialmod.common.world.structures.ModStructures;
 import com.mojang.serialization.Codec;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -36,6 +33,8 @@ public class ModWorldEvents {
         ModOreGeneration.generateOres(event);
         ModFlowerGeneration.generateFlowers(event);
         ModTreeGeneration.generateTrees(event);
+
+        ModEntityGeneration.onEntitySpawn(event);
     }
 
     @SubscribeEvent

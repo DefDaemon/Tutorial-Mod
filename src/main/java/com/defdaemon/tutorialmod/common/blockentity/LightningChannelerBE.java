@@ -1,7 +1,6 @@
 package com.defdaemon.tutorialmod.common.blockentity;
 
 import com.defdaemon.tutorialmod.core.init.ModBlockEntities;
-import com.defdaemon.tutorialmod.core.init.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -9,8 +8,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.SpawnData;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
@@ -48,6 +45,12 @@ public class LightningChannelerBE extends BlockEntity
         return super.getCapability(cap, side);
     }
 
+    @Nonnull
+    @Override
+    public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap) {
+        return super.getCapability(cap);
+    }
+
     @Override
     public void load(CompoundTag nbt)
     {
@@ -62,7 +65,8 @@ public class LightningChannelerBE extends BlockEntity
         return super.save(compound);
     }
 
-    private ItemStackHandler createHandler() {
+    private ItemStackHandler createHandler()
+    {
         return new ItemStackHandler(2) {
             @Override
             protected void onContentsChanged(int slot) {
@@ -90,16 +94,55 @@ public class LightningChannelerBE extends BlockEntity
         };
     }
 
-    public void lightningHasStruck()
+    private void strikeLightning()
     {
-        boolean hasFocusInFirstSlot = this.itemHandler.getStackInSlot(0).getCount() > 0 && this.itemHandler.getStackInSlot(0).getItem() == Items.GLASS_PANE;
-        boolean hasFocusInSecondSlot = this.itemHandler.getStackInSlot(1).getCount() > 0 && this.itemHandler.getStackInSlot(1).getItem() == ModItems.AMETHYST.get();
-
-        if(hasFocusInFirstSlot && hasFocusInSecondSlot)
-        {
-            this.itemHandler.getStackInSlot(0).shrink(1);
-            this.itemHandler.getStackInSlot(1).shrink(1);
-            this.itemHandler.insertItem(1, new ItemStack(ModItems.FIRESTONE.get()), false);
+        if(!this.level.isClientSide) {
+            EntityType.LIGHTNING_BOLT.spawn((ServerLevel) level, null, null, this.getBlockPos(), MobSpawnType.TRIGGERED, true, true);
         }
+        level.getMoonPhase();
+    }
+
+
+    public void craft()
+    {
+        //Inventory inv = new Inventory(this.itemHandler.getSlots());
+        //for (int i = 0; i < itemHandler.getSlots(); i++) {
+        //    inv.setItem(i, itemHandler.getStackInSlot(i));
+        //}
+
+        //Container container = new SimpleContainer(itemHandler.getStackInSlot(0));
+
+        //Optional<LightningChannelerRecipe> recipe = level.getRecipeManager().getRecipeFor(ModRecipeTypes.LIGHTNING_RECIPE, inv, level);
+        //recipe.ifPresent(iRecipe -> {
+        //    ItemStack output = iRecipe.getResultItem();
+
+        //    if(iRecipe.getWeather().equals(LightningChannelerRecipe.Weather.CLEAR) && !level.isRaining()) {
+        //        craftTheItem(output);
+        //    }
+
+        //    if(iRecipe.getWeather().equals(LightningChannelerRecipe.Weather.RAIN) && level.isRaining()) {
+        //        craftTheItem(output);
+        //    }
+
+        //    if(iRecipe.getWeather().equals(LightningChannelerRecipe.Weather.THUNDERING) && level.isThundering()) {
+        //        strikeLightning();
+        //        craftTheItem(output);
+        //    }
+        //    setChanged();
+        //});
+    }
+
+    private void craftTheItem(ItemStack output)
+    {
+        itemHandler.extractItem(0, 1, false);
+        itemHandler.extractItem(1, 1, false);
+        itemHandler.insertItem(1, output, false);
+    }
+
+    public void tick()
+    {
+        if(level.isClientSide)
+            return;
+        craft();
     }
 }

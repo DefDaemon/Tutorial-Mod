@@ -1,6 +1,5 @@
 package com.defdaemon.tutorialmod.common.world.gen;
 
-import com.defdaemon.tutorialmod.core.init.ModConfiguredFeatures;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.Features;
 import net.minecraft.resources.ResourceKey;

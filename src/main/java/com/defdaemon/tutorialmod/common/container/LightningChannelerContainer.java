@@ -71,7 +71,7 @@ public class LightningChannelerContainer extends AbstractContainerMenu
     @Override
     public boolean stillValid(Player player)
     {
-        return stillValid(ContainerLevelAccess.create(tileEntity.getLevel(), tileEntity.getBlockPos()), player, ModBlocks.LIGHTING_CHANNELER.get());
+        return stillValid(ContainerLevelAccess.create(tileEntity.getLevel(), tileEntity.getBlockPos()), player, ModBlocks.LIGHTNING_CHANNELER.get());
     }
 
     private static final int HOTBAR_SLOT_COUNT = 9;

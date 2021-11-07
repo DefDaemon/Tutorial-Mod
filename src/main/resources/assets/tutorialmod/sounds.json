@@ -1,0 +1,41 @@
+{
+  "small_explosion": {
+    "category": "blocks",
+    "subtitle": "tutorialmod.small_explosion",
+    "sounds": [
+      "tutorialmod:small_explosion"
+    ]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "tutorialmod:bar_brawl",
+        "stream": true
+      }
+    ]
+  },
+
+  "entity.buff_zombie.ambient": {
+    "sounds": [
+      "tutorialmod:buff_zombie_ambient"
+    ]
+  },
+
+  "entity.buff_zombie.death": {
+    "sounds": [
+      "tutorialmod:buff_zombie_death"
+    ]
+  },
+
+  "entity.buff_zombie.hurt": {
+    "sounds": [
+      "tutorialmod:buff_zombie_hurt"
+    ]
+  },
+
+  "entity.pigeon.ambient": {
+    "sounds": [
+      "tutorialmod:pigeon_ambient"
+    ]
+  }
+}

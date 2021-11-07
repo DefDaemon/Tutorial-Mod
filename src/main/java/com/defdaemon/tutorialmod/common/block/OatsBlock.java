@@ -1,7 +1,6 @@
 package com.defdaemon.tutorialmod.common.block;
 
 import com.defdaemon.tutorialmod.core.init.ModBlocks;
-import com.defdaemon.tutorialmod.core.init.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;

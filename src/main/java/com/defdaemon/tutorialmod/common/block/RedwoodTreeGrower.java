@@ -1,6 +1,6 @@
 package com.defdaemon.tutorialmod.common.block;
 
-import com.defdaemon.tutorialmod.core.init.ModConfiguredFeatures;
+import com.defdaemon.tutorialmod.common.world.gen.ModConfiguredFeatures;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;

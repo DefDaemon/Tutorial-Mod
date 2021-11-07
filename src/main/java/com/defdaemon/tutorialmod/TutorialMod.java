@@ -1,8 +1,14 @@
 package com.defdaemon.tutorialmod;
 
+import com.defdaemon.tutorialmod.core.init.ModBlocks;
+import com.defdaemon.tutorialmod.core.init.ModBlockEntities;
+import com.defdaemon.tutorialmod.core.init.ModEntityTypes;
 import com.defdaemon.tutorialmod.client.screen.LightningChannelerScreen;
-import com.defdaemon.tutorialmod.core.init.*;
-import com.defdaemon.tutorialmod.common.world.structure.ModStructures;
+import com.defdaemon.tutorialmod.core.init.ModContainers;
+import com.defdaemon.tutorialmod.core.util.ModSoundEvents;
+import com.defdaemon.tutorialmod.common.world.structures.ModStructures;
+import com.defdaemon.tutorialmod.data.recipes.ModRecipeTypes;
+import com.defdaemon.tutorialmod.core.init.ModItems;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -40,16 +46,14 @@ public class TutorialMod
         ModBlockEntities.register(eventBus);
         ModContainers.register(eventBus);
         ModStructures.register(eventBus);
-        ModFluids.register(eventBus);
-        //ModRecipeTypes.register(eventBus);
-        //ModSoundEvents.register(eventBus);
+        //ModFluids.register(eventBus);
+        ModRecipeTypes.register(eventBus);
+        ModSoundEvents.register(eventBus);
+        ModEntityTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
-        // Register the enqueueIMC method for modloading
         eventBus.addListener(this::enqueueIMC);
-        // Register the processIMC method for modloading
         eventBus.addListener(this::processIMC);
-        // Register the doClientStuff method for modloading
         eventBus.addListener(this::doClientStuff);
 
         // Register ourselves for server and other game events we are interested in
@@ -78,9 +82,9 @@ public class TutorialMod
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.REDWOOD_SAPLING.get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.HYACINTH.get(), RenderType.cutout());
             //ScreenManager.registerFactory(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(), LightningChannelerScreen::new);
-            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_FLUID.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_BLOCK.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.translucent());
+//            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_FLUID.get(), RenderType.translucent());
+//            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_BLOCK.get(), RenderType.translucent());
+//            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.translucent());
         });
     }
 

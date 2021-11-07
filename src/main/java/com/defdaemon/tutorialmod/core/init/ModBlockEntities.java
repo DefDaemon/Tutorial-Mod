@@ -12,7 +12,7 @@ public class ModBlockEntities {
 
     public static DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, TutorialMod.MOD_ID);
 
-    public static RegistryObject<BlockEntityType<LightningChannelerBE>> LIGHTNING_CHANNELER_BE = BLOCK_ENTITIES.register("lightning_channeler", () -> BlockEntityType.Builder.of(LightningChannelerBE::new, ModBlocks.LIGHTING_CHANNELER.get()).build(null));
+    public static RegistryObject<BlockEntityType<LightningChannelerBE>> LIGHTNING_CHANNELER_BE = BLOCK_ENTITIES.register("lightning_channeler", () -> BlockEntityType.Builder.of(LightningChannelerBE::new, ModBlocks.LIGHTNING_CHANNELER.get()).build(null));
 
     //Helper functions
     public static void register(IEventBus eventBus)

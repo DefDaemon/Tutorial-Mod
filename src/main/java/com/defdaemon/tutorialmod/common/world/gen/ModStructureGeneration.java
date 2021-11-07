@@ -1,6 +1,6 @@
 package com.defdaemon.tutorialmod.common.world.gen;
 
-import com.defdaemon.tutorialmod.common.world.structure.ModStructures;
+import com.defdaemon.tutorialmod.common.world.structures.ModStructures;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;

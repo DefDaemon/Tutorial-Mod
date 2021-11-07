@@ -12,6 +12,20 @@
   "item.tutorialmod.amethyst_boots": "Amethyst Boots",
   "item.tutorialmod.amethyst_horse_armor": "Amethyst Horse Armor",
   "item.tutorialmod.redwood_sign": "Redwood Sign",
+  "item.tutorialmod.happy_crop": "Happy Crop",
+  "item.tutorialmod.happy_seeds": "Happy Seeds",
+  "item.tutorialmod.happy_stuff": "Happy Stuff",
+  "item.tutorialmod.happy_cookie": "Happy Cookie",
+  "item.tutorialmod.oats": "Oats",
+  "item.tutorialmod.oil_bucket": "Oil Bucket",
+  "item.tutorialmod.titanium_ingot": "Titanium Ingot",
+  "item.tutorialmod.titanium_nugget": "Titanium Nugget",
+  "item.tutorialmod.raw_titanium": "Raw Titanium",
+  "item.tutorialmod.tomato": "Tomato",
+  "item.tutorialmod.smart_blow_torch": "Smart Blow Torch",
+  "item.tutorialmod.buff_zombie_spawn_egg": "Buff Zombie Spawn Egg",
+  "item.tutorialmod.pigeon_spawn_egg": "Pigeon Spawn Egg",
+
   "block.tutorialmod.firestone_block": "Firestone Block",
   "block.tutorialmod.amethyst_ore": "Amethyst Ore",
   "block.tutorialmod.amethyst_block": "Amethyst Block",
@@ -26,7 +40,6 @@
   "block.tutorialmod.oats_crop": "Oats",
   "block.tutorialmod.redwood_sign": "Redwood Sign",
   "block.tutorialmod.redwood_wall_sign": "Redwood Wall Sign",
-  "item.tutorialmod.oats": "Oats",
   "block.tutorialmod.redwood_log": "Redwood Log",
   "block.tutorialmod.redwood_planks": "Redwood Planks",
   "block.tutorialmod.redwood_wood": "Redwood Wood",
@@ -34,19 +47,25 @@
   "block.tutorialmod.stripped_redwood_wood": "Stripped Redwood Wood",
   "block.tutorialmod.redwood_sapling": "Redwood Sapling",
   "block.tutorialmod.redwood_leaves": "Redwood Leaves",
-  "item.tutorialmod.happy_crop": "Happy Crop",
-  "item.tutorialmod.happy_seeds": "Happy Seeds",
-  "item.tutorialmod.happy_stuff": "Happy Stuff",
-  "item.tutorialmod.happy_cookie": "Happy Cookie",
-  "item.tutorialmod.oil_bucket": "Oil Bucket",
   "block.tutorialmod.hyacinth": "Hyacinth",
   "block.tutorialmod.lightning_channeler": "Lightning Channeler",
+  "block.tutorialmod.titanium_block": "Titanium Block",
+  "block.tutorialmod.titanium_ore": "Titanium Ore",
+  "block.tutorialmod.speedy_block": "Speedy Block",
+
   "screen.tutorialmod.lightning_channeler": "Lightning Channeler",
+
   "fluid.tutorialmod.oil": "Oil",
-  "itemGroup.tutorialModTab": "Tutorial Mod Tab",
+
+  "itemGroup.tutorialModTab": "Tutorial Tab",
+
   "tooltip.firestone": "Hold \u00A7eSHIFT\u00A7r for more information!",
   "tooltip.firestone_shift": "Might set you on fire. But also might protect you from it!",
+
   "commands.home.set.success": "Set Home at %s",
   "commands.home.return.failure": "No Home Position has been set !",
-  "commands.home.return.success": "Player returned Home!"
+  "commands.home.return.success": "Player returned Home!",
+
+  "entity.tutorialmod.buffzombie": "Buff Zombie",
+  "entity.tutorialmod.pigeon": "Pigeon"
 }
