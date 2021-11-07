@@ -1,14 +1,11 @@
 package com.defdaemon.tutorialmod;
 
-import com.defdaemon.tutorialmod.core.init.ModBlocks;
-import com.defdaemon.tutorialmod.core.init.ModBlockEntities;
-import com.defdaemon.tutorialmod.core.init.ModEntityTypes;
+import com.defdaemon.tutorialmod.common.world.biome.ModBiomes;
+import com.defdaemon.tutorialmod.common.world.gen.ModBiomeGeneration;
+import com.defdaemon.tutorialmod.core.init.*;
 import com.defdaemon.tutorialmod.client.screen.LightningChannelerScreen;
-import com.defdaemon.tutorialmod.core.init.ModContainers;
-import com.defdaemon.tutorialmod.core.util.ModSoundEvents;
 import com.defdaemon.tutorialmod.common.world.structures.ModStructures;
-import com.defdaemon.tutorialmod.data.recipes.ModRecipeTypes;
-import com.defdaemon.tutorialmod.core.init.ModItems;
+import com.defdaemon.tutorialmod.common.recipe.ModRecipeTypes;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -48,8 +45,9 @@ public class TutorialMod
         ModStructures.register(eventBus);
         //ModFluids.register(eventBus);
         ModRecipeTypes.register(eventBus);
-        ModSoundEvents.register(eventBus);
+        ModSounds.register(eventBus);
         ModEntityTypes.register(eventBus);
+        ModBiomes.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);
@@ -69,6 +67,7 @@ public class TutorialMod
             MenuScreens.register(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(), LightningChannelerScreen::new);
         });
         ModStructures.setupStructures();
+        ModBiomeGeneration.generateBiomes();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event)

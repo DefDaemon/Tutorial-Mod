@@ -1,6 +1,7 @@
 package com.defdaemon.tutorialmod.common.world;
 
 import com.defdaemon.tutorialmod.TutorialMod;
+import com.defdaemon.tutorialmod.common.events.ModEntityGeneration;
 import com.defdaemon.tutorialmod.common.world.gen.*;
 import com.defdaemon.tutorialmod.common.world.structures.ModStructures;
 import com.mojang.serialization.Codec;

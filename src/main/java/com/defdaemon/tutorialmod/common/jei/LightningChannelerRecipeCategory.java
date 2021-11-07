@@ -1,7 +1,7 @@
-package com.defdaemon.tutorialmod.integration.jei;
+package com.defdaemon.tutorialmod.common.jei;
 
 import com.defdaemon.tutorialmod.TutorialMod;
-import com.defdaemon.tutorialmod.data.recipes.LightningChannelerRecipe;
+import com.defdaemon.tutorialmod.common.recipe.LightningChannelerRecipe;
 import com.defdaemon.tutorialmod.core.init.ModBlocks;
 import com.mojang.blaze3d.vertex.PoseStack;
 import mezz.jei.api.constants.VanillaTypes;

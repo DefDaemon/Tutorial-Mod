@@ -54,7 +54,7 @@ public class PigeonEntity extends Parrot
     @Override
     public SoundEvent getAmbientSound()
     {
-        return SoundEvents.CHICKEN_AMBIENT;
+        return ModSounds.PIGEON_AMBIENT.get();
     }
 
     @Override

@@ -1,8 +1,8 @@
-package com.defdaemon.tutorialmod.integration.jei;
+package com.defdaemon.tutorialmod.common.jei;
 
 import com.defdaemon.tutorialmod.TutorialMod;
-import com.defdaemon.tutorialmod.data.recipes.LightningChannelerRecipe;
-import com.defdaemon.tutorialmod.data.recipes.ModRecipeTypes;
+import com.defdaemon.tutorialmod.common.recipe.LightningChannelerRecipe;
+import com.defdaemon.tutorialmod.common.recipe.ModRecipeTypes;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;

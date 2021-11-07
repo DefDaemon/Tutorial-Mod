@@ -1,4 +1,4 @@
-package com.defdaemon.tutorialmod.data.recipes;
+package com.defdaemon.tutorialmod.common.recipe;
 
 import com.defdaemon.tutorialmod.TutorialMod;
 import net.minecraft.core.Registry;

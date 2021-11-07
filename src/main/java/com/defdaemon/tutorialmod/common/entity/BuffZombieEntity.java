@@ -67,20 +67,19 @@ public class BuffZombieEntity extends Zombie
     @Override
     protected SoundEvent getAmbientSound()
     {
-        return SoundEvents.ZOMBIE_AMBIENT;
-       // return ModSounds.BUFF_ZOMBIE_AMBIENT.get();
+       return ModSounds.BUFF_ZOMBIE_AMBIENT.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSource)
     {
-        return SoundEvents.ZOMBIE_HURT;
+        return ModSounds.BUFF_ZOMBIE_HURT.get();
     }
 
     @Override
     protected SoundEvent getDeathSound()
     {
-        return SoundEvents.ZOMBIE_DEATH;
+        return ModSounds.BUFF_ZOMBIE_DEATH.get();
     }
 
     protected SoundEvent getStepSound()

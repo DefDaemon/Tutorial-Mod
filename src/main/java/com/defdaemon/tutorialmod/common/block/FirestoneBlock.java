@@ -1,7 +1,7 @@
 package com.defdaemon.tutorialmod.common.block;
 
 import com.defdaemon.tutorialmod.common.item.Firestone;
-import com.defdaemon.tutorialmod.core.util.ModSoundEvents;
+import com.defdaemon.tutorialmod.core.init.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
@@ -33,7 +33,7 @@ public class FirestoneBlock extends Block
             if(hand == InteractionHand.MAIN_HAND)
             {
                 System.out.println("I right clicked a Firestone Block. Called from the Main Hand");
-                level.playSound(null, pos, ModSoundEvents.SMALL_EXPLOSION.get(), SoundSource.BLOCKS, 1, 1);
+                level.playSound(null, pos, ModSounds.SMALL_EXPLOSION.get(), SoundSource.BLOCKS, 1, 1);
             } else
             {
                 System.out.println("I right clicked a Firestone Block. Called from the Off Hand");

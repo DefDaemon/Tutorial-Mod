@@ -1,4 +1,4 @@
-package com.defdaemon.tutorialmod.common.world.gen;
+package com.defdaemon.tutorialmod.common.events;
 
 import com.defdaemon.tutorialmod.core.init.ModEntityTypes;
 import net.minecraft.resources.ResourceKey;
