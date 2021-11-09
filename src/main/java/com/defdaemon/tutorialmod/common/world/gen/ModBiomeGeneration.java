@@ -24,7 +24,5 @@ public class ModBiomeGeneration
         ResourceKey<Biome> key = ResourceKey.create(ForgeRegistries.Keys.BIOMES, Objects.requireNonNull(ForgeRegistries.BIOMES.getKey(biome)));
         BiomeDictionary.addTypes(key, types);
         Boolean result = BiomeManager.addBiome(type, new BiomeManager.BiomeEntry(key, weight));
-        System.out.print("DEF DAEMON: result adding biome");
-        System.out.println(result);
     }
 }

@@ -66,6 +66,6 @@
   "commands.home.return.failure": "No Home Position has been set !",
   "commands.home.return.success": "Player returned Home!",
 
-  "entity.tutorialmod.buffzombie": "Buff Zombie",
+  "entity.tutorialmod.buff_zombie": "Buff Zombie",
   "entity.tutorialmod.pigeon": "Pigeon"
 }

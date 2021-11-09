@@ -85,6 +85,8 @@ public class ModItems
 
     public static final RegistryObject<Item> KAUPENBOW = ITEMS.register("kaupenbow", () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
 
+    public static final RegistryObject<Item> KAUPENSTAFF = ITEMS.register("kaupen_staff", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
+
 
     //Helper function
     public static void register(IEventBus eventBus)

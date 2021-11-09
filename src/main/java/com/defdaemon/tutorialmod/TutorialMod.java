@@ -8,11 +8,17 @@ import com.defdaemon.tutorialmod.common.world.structures.ModStructures;
 import com.defdaemon.tutorialmod.common.recipe.ModRecipeTypes;
 import com.defdaemon.tutorialmod.core.util.ModItemModelProperties;
 import com.google.common.collect.ImmutableMap;
+import net.minecraft.advancements.critereon.TameAnimalTrigger;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.level.NaturalSpawner;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -69,6 +75,9 @@ public class TutorialMod
         });
         ModStructures.setupStructures();
         ModBiomeGeneration.generateBiomes();
+
+        SpawnPlacements.register(ModEntityTypes.BUFF_ZOMBIE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
+        SpawnPlacements.register(ModEntityTypes.PIGEON.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Animal::checkAnimalSpawnRules);
     }
 
     private void doClientStuff(final FMLClientSetupEvent event)
@@ -86,6 +95,7 @@ public class TutorialMod
 //            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_BLOCK.get(), RenderType.translucent());
 //            ItemBlockRenderTypes.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.translucent());
             ModItemModelProperties.makeBow(ModItems.KAUPENBOW.get());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.KAUPEN_ALTAR.get(), RenderType.cutout());
         });
     }
 

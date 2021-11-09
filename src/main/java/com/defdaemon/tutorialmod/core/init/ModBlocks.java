@@ -75,6 +75,7 @@ public class ModBlocks
 
     public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channeler", () -> new LightningChannelerBlock(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(2.0f)), ModCreativeModeTab.TUTORIAL_TAB);
 
+    public static final RegistryObject<Block> KAUPEN_ALTAR = registerBlock("kaupen_altar", () -> new KaupenAltarBlock(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()), ModCreativeModeTab.TUTORIAL_TAB);
 
     // Register helper functions
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab itemGroup)
