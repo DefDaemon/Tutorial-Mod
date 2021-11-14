@@ -2,6 +2,7 @@ package com.defdaemon.tutorialmod.common.events.loot;
 
 import com.google.gson.JsonObject;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -28,18 +29,17 @@ public class FirestoneAdditionModifier extends LootModifier
     @Override
     protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context)
     {
-        // generatedLoot is the loot that would be dropped, if we wouldn't add or replace
-        // anything!
-        generatedLoot.add(new ItemStack(addition, 1));
+         generatedLoot.add(new ItemStack(addition, 1));
         return generatedLoot;
     }
 
-    public static class Serializer extends GlobalLootModifierSerializer<FirestoneAdditionModifier> {
+    public static class Serializer extends GlobalLootModifierSerializer<FirestoneAdditionModifier>
+    {
 
         @Override
         public FirestoneAdditionModifier read(ResourceLocation name, JsonObject object, LootItemCondition[] conditionsIn)
         {
-            Item addition = ForgeRegistries.ITEMS.getValue(new ResourceLocation(JsonUtils.readNBT(object, "addition").toString()));
+            Item addition = ForgeRegistries.ITEMS.getValue(new ResourceLocation((GsonHelper.getAsString(object, "addition"))));
             return new FirestoneAdditionModifier(conditionsIn, addition);
 
         }

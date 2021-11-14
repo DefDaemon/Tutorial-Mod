@@ -2,7 +2,7 @@
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "minecraft:chests/igloo_chest"
+      "loot_table_id": "minecraft/chests/igloo_chest"
     }
   ],
   "addition": "tutorialmod:firestone"

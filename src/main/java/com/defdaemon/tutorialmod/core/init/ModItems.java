@@ -5,11 +5,15 @@ import com.defdaemon.tutorialmod.common.material.ModArmorMaterial;
 import com.defdaemon.tutorialmod.common.material.ModToolMaterial;
 import com.defdaemon.tutorialmod.common.item.Firestone;
 import com.defdaemon.tutorialmod.common.item.SmartBlowtorchItem;
+import net.minecraft.client.sounds.MusicManager;
+import net.minecraft.sounds.Music;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.FurnaceBlock;
+import net.minecraft.world.level.block.JukeboxBlock;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -87,6 +91,11 @@ public class ModItems
 
     public static final RegistryObject<Item> KAUPENSTAFF = ITEMS.register("kaupen_staff", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
 
+    public static final RegistryObject<Item> MUSIC_DISC_BAR_BRAWL = ITEMS.register("music_disc_bar_brawl",
+            () -> new RecordItem(1, () -> ModSounds.BAR_BRAWL.get(), new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.TUTORIAL_TAB).rarity(Rarity.RARE)));
+
+    public static final RegistryObject<Item> MUSIC_DISC_YOMI_YORI = ITEMS.register("music_disc_yomi_yori",
+            () -> new RecordItem(1, () -> ModSounds.YOMI_YORI.get(), new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.TUTORIAL_TAB).rarity(Rarity.EPIC)));
 
     //Helper function
     public static void register(IEventBus eventBus)

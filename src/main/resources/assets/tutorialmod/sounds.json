@@ -15,6 +15,15 @@
     ]
   },
 
+  "yomi_yori": {
+    "sounds": [
+      {
+        "name": "tutorialmod:yomi_yori",
+        "stream": true
+      }
+    ]
+  },
+
   "entity.buff_zombie.ambient": {
     "sounds": [
       "tutorialmod:buff_zombie_ambient"

@@ -25,6 +25,10 @@
   "item.tutorialmod.smart_blow_torch": "Smart Blow Torch",
   "item.tutorialmod.buff_zombie_spawn_egg": "Buff Zombie Spawn Egg",
   "item.tutorialmod.pigeon_spawn_egg": "Pigeon Spawn Egg",
+  "item.tutorialmod.music_disc_bar_brawl": "Bar Brawl",
+  "item.tutorialmod.music_disc_bar_brawl.desc": "Bar Brawl Description",
+  "item.tutorialmod.music_disc_yomi_yori": "Yomi Yori",
+  "item.tutorialmod.music_disc_yomi_yori.desc": "Japanese Death Metal",
 
   "block.tutorialmod.firestone_block": "Firestone Block",
   "block.tutorialmod.amethyst_ore": "Amethyst Ore",
@@ -59,8 +63,12 @@
 
   "itemGroup.tutorialModTab": "Tutorial Tab",
 
-  "tooltip.firestone": "Hold \u00A7eSHIFT\u00A7r for more information!",
-  "tooltip.firestone_shift": "Might set you on fire. But also might protect you from it!",
+  "tooltip.tutorialmod.firestone": "Hold \u00A7eSHIFT\u00A7r for more information!",
+  "tooltip.tutorialmod.firestone_shift": "Might set you on fire. But also might protect you from it!",
+
+  "tooltip.tutorialmod.blowtorch_shift": "Hold \u00A7eSHIFT\u00A7r for more information!",
+  "tooltip.tutorialmod.blowtorch": "Click a block and see if you can blow torch it into a different item",
+  "tooltip.block.tutorialmod.block": "A hardened metal block, almost impossible to break",
 
   "commands.home.set.success": "Set Home at %s",
   "commands.home.return.failure": "No Home Position has been set !",

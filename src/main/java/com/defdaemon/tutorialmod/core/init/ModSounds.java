@@ -15,6 +15,7 @@ public class ModSounds
     public static final RegistryObject<SoundEvent> SMALL_EXPLOSION = registerSoundEvent("small_explosion");
 
     public static final RegistryObject<SoundEvent> BAR_BRAWL = registerSoundEvent("bar_brawl");
+    public static final RegistryObject<SoundEvent> YOMI_YORI = registerSoundEvent("yomi_yori");
 
     public static final RegistryObject<SoundEvent> BUFF_ZOMBIE_AMBIENT = registerSoundEvent("entity.buff_zombie.ambient");
 

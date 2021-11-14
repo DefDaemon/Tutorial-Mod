@@ -30,6 +30,7 @@ public class ModTags
     {
 
         public static final Tags.IOptionalNamedTag<Item> AMETHYST = Items.createForgeTag("gems/amethyst");
+        public static final Tags.IOptionalNamedTag<Item> TITANIUM_INGOT = Items.createForgeTag("ingots/titanium");
 
         private static Tags.IOptionalNamedTag<Item> createTag(String name)
         {
