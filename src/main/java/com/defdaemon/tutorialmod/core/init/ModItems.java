@@ -14,6 +14,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.FurnaceBlock;
 import net.minecraft.world.level.block.JukeboxBlock;
+import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -79,7 +80,7 @@ public class ModItems
             .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 200), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 200), 1.0f).build()).tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
-    //public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket", () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(), new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.TUTORIAL_TAB)));
+    public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket", () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(), new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<ForgeSpawnEggItem> BUFF_ZOMBIE_SPAWN_EGG = ITEMS.register("buff_zombie_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.BUFF_ZOMBIE, 0x464F56, 0x1D6336, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(16)));
