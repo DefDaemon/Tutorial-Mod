@@ -1,7 +1,6 @@
 package com.defdaemon.tutorialmod.common.entity;
 
 import com.defdaemon.tutorialmod.TutorialMod;
-import com.defdaemon.tutorialmod.core.init.ModEntityTypes;
 import com.defdaemon.tutorialmod.core.init.ModItems;
 import com.defdaemon.tutorialmod.core.init.ModSounds;
 import net.minecraft.resources.ResourceLocation;

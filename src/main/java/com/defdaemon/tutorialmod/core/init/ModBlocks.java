@@ -31,6 +31,25 @@ public class ModBlocks
 
     public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block", () -> new SpeedyBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
 
+    public static final RegistryObject<Block> TITANIUM_STAIRS = registerBlock("titanium_stairs", () -> new StairBlock(() -> TITANIUM_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TITANIUM_FENCE = registerBlock("titanium_fence", () -> new FenceBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TITANIUM_WALL = registerBlock("titanium_wall", () -> new WallBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TITANIUM_FENCE_GATE = registerBlock("titanium_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TITANIUM_SLAB = registerBlock("titanium_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TITANIUM_BUTTON = registerBlock("titanium_button", () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TITANIUM_PRESSURE_PLATE = registerBlock("titanium_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TITANIUM_DOOR = registerBlock("titanium_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<Block> TITANIUM_TRAPDOOR = registerBlock("titanium_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<Block> TOMATO_PLANT = BLOCKS.register("tomato_plant", () -> new TomatoPlantBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
 
     // From 1.16.5 tutorial
@@ -47,6 +66,8 @@ public class ModBlocks
     public static final RegistryObject<Block> AMETHYST_SLAB = registerBlock("amethyst_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(AMETHYST_BLOCK.get())), ModCreativeModeTab.TUTORIAL_TAB);
 
     public static final RegistryObject<Block> AMETHYST_BUTTON = registerBlock("amethyst_button", () -> new StoneButtonBlock(BlockBehaviour.Properties.copy(AMETHYST_BLOCK.get())), ModCreativeModeTab.TUTORIAL_TAB);
+
+    public static final RegistryObject<Block> AMETHYST_WALL = registerBlock("amethyst_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(AMETHYST_BLOCK.get())), ModCreativeModeTab.TUTORIAL_TAB);
 
     public static final RegistryObject<Block> AMETHYST_PRESSURE_PLATE = registerBlock("amethyst_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, BlockBehaviour.Properties.copy(AMETHYST_BLOCK.get())), ModCreativeModeTab.TUTORIAL_TAB);
 

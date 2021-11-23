@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tutorialmod:amethyst_fence_gate"
+    "tutorialmod:amethyst_fence_gate",
+    "tutorialmod:titanium_fence_gate"
   ]
 }

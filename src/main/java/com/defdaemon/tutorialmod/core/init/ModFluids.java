@@ -1,5 +1,6 @@
 package com.defdaemon.tutorialmod.core.init;
 
+/*
 import com.defdaemon.tutorialmod.TutorialMod;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
@@ -40,3 +41,4 @@ public class ModFluids
     }
 }
 
+*/

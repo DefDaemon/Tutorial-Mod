@@ -14,7 +14,8 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements ArmorMaterial {
 
-    AMETHYST("amethyst", 7, new int[] { 2, 5, 6, 2 }, 12, SoundEvents.ARMOR_EQUIP_IRON, 1.0f, 0.0f, () -> { return Ingredient.of(ModItems.AMETHYST.get()); });
+    AMETHYST("amethyst", 7, new int[] { 2, 5, 6, 2 }, 12, SoundEvents.ARMOR_EQUIP_IRON, 1.0f, 0.0f, () -> { return Ingredient.of(ModItems.AMETHYST.get()); }),
+    TITANIUM("titanium", 50, new int[]{3, 6, 8, 3}, 5, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.2F, () -> { return Ingredient.of(ModItems.TITANIUM_INGOT.get()); });
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
     private final String name;

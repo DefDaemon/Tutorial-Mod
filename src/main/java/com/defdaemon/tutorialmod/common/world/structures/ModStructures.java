@@ -1,7 +1,6 @@
 package com.defdaemon.tutorialmod.common.world.structures;
 
 import com.defdaemon.tutorialmod.TutorialMod;
-import com.defdaemon.tutorialmod.common.world.structures.TradingHallStructure;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.data.BuiltinRegistries;

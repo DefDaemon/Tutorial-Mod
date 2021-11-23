@@ -7,8 +7,8 @@ import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 
 public class PigeonFlyingMovementController extends FlyingMoveControl
 {
-    private int maxTurn = 0;
-    private boolean hoversInPlace = false;
+    private final int maxTurn;
+    private final boolean hoversInPlace;
 
     public PigeonFlyingMovementController(Mob mob, int maxTurn, boolean hoversInPlace)
     {

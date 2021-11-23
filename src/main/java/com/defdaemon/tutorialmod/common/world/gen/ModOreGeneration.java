@@ -3,7 +3,6 @@ package com.defdaemon.tutorialmod.common.world.gen;
 import com.defdaemon.tutorialmod.common.world.biome.ModBiomes;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.data.worldgen.Features;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
@@ -17,7 +16,6 @@ import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguratio
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
-import java.awt.*;
 import java.util.Arrays;
 
 public class ModOreGeneration

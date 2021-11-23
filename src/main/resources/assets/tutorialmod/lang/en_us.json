@@ -29,7 +29,32 @@
   "item.tutorialmod.music_disc_bar_brawl.desc": "Bar Brawl Description",
   "item.tutorialmod.music_disc_yomi_yori": "Yomi Yori",
   "item.tutorialmod.music_disc_yomi_yori.desc": "Japanese Death Metal",
+  "item.tutorialmod.coal_coke": "Coal Coke",
 
+  "item.tutorialmod.titanium_sword": "Titanium Sword",
+  "item.tutorialmod.titanium_shovel": "Titanium Shovel",
+  "item.tutorialmod.titanium_axe": "Titanium Axe",
+  "item.tutorialmod.titanium_pickaxe": "Titanium Pickaxe",
+  "item.tutorialmod.titanium_hoe": "Titanium Hoe",
+
+  "item.tutorialmod.titanium_helmet": "Titanium Helmet",
+  "item.tutorialmod.titanium_chestplate": "Titanium Chestplate",
+  "item.tutorialmod.titanium_leggings": "Titanium Leggings",
+  "item.tutorialmod.titanium_boots": "Titanium Boots",
+
+  "item.tutorialmod.titanium_horse_armor": "Titanium Horse Armor",
+
+
+  "block.tutorialmod.titanium_stairs": "Titanium Stairs",
+  "block.tutorialmod.titanium_fence": "Titanium Fence",
+  "block.tutorialmod.titanium_fence_gate": "Titanium Fence Gate",
+  "block.tutorialmod.titanium_slab": "Titanium Slab",
+  "block.tutorialmod.titanium_wall": "Titanium Wall",
+
+  "block.tutorialmod.titanium_button": "Titanium Button",
+  "block.tutorialmod.titanium_pressure_plate": "Titanium Pressure Plate",
+  "block.tutorialmod.titanium_door": "Titanium Door",
+  "block.tutorialmod.titanium_trapdoor": "Titanium Trapdoor",
   "block.tutorialmod.firestone_block": "Firestone Block",
   "block.tutorialmod.amethyst_ore": "Amethyst Ore",
   "block.tutorialmod.amethyst_block": "Amethyst Block",

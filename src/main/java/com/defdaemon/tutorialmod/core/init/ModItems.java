@@ -1,20 +1,14 @@
 package com.defdaemon.tutorialmod.core.init;
 
 import com.defdaemon.tutorialmod.TutorialMod;
+import com.defdaemon.tutorialmod.common.item.*;
 import com.defdaemon.tutorialmod.common.material.ModArmorMaterial;
 import com.defdaemon.tutorialmod.common.material.ModToolMaterial;
-import com.defdaemon.tutorialmod.common.item.Firestone;
-import com.defdaemon.tutorialmod.common.item.SmartBlowtorchItem;
-import net.minecraft.client.sounds.MusicManager;
-import net.minecraft.sounds.Music;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.FurnaceBlock;
-import net.minecraft.world.level.block.JukeboxBlock;
-import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -26,21 +20,39 @@ public class ModItems
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
     // From 1.17.1 tutorial
-    public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+    public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
-    public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+    public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
-    public static final RegistryObject<Item> RAW_TITANIUM = ITEMS.register("raw_titanium",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+    public static final RegistryObject<Item> RAW_TITANIUM = ITEMS.register("raw_titanium", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
-    public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)
-                    .food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
+    public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.2f).build())));
 
-    public static final RegistryObject<Item> SMART_BLOW_TORCH = ITEMS.register("smart_blow_torch",
-            () -> new SmartBlowtorchItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).durability(64)));
+    public static final RegistryObject<Item> SMART_BLOW_TORCH = ITEMS.register("smart_blow_torch", () -> new SmartBlowtorchItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).durability(64)));
+
+    public static final RegistryObject<Item> COAL_COKE = ITEMS.register("coal_coke", () -> new CoalCokeItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TITANIUM_SWORD = ITEMS.register("titanium_sword", () -> new SwordItem(ModTiers.TITANIUM, 2, 3f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TITANIUM_PICKAXE = ITEMS.register("titanium_pickaxe", () -> new PickaxeItem(ModTiers.TITANIUM, 0, 1f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TITANIUM_SHOVEL = ITEMS.register("titanium_shovel", () -> new ShovelItem(ModTiers.TITANIUM, 2, 3f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TITANIUM_AXE = ITEMS.register("titanium_axe", () -> new AxeItem(ModTiers.TITANIUM, 4, -2f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TITANIUM_HOE = ITEMS.register("titanium_hoe", () -> new HoeItem(ModTiers.TITANIUM, 2, 3f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TITANIUM_BOOTS = ITEMS.register("titanium_boots", () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TITANIUM_LEGGINGS = ITEMS.register("titanium_leggings", () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.LEGS, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TITANIUM_CHESTPLATE = ITEMS.register("titanium_chestplate", () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TITANIUM_HELMET = ITEMS.register("titanium_helmet", () -> new ModArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TITANIUM_HORSE_ARMOR = ITEMS.register("titanium_horse_armor", () -> new HorseArmorItem(16, "titanium", new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds", () -> new ItemNameBlockItem(ModBlocks.TOMATO_PLANT.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
 
     // From 1.16.5 tutorial
@@ -80,7 +92,7 @@ public class ModItems
             .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 200), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 200), 1.0f).build()).tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
-    public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket", () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(), new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.TUTORIAL_TAB)));
+    //public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket", () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(), new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<ForgeSpawnEggItem> BUFF_ZOMBIE_SPAWN_EGG = ITEMS.register("buff_zombie_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.BUFF_ZOMBIE, 0x464F56, 0x1D6336, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(16)));
@@ -90,7 +102,7 @@ public class ModItems
 
     public static final RegistryObject<Item> KAUPENBOW = ITEMS.register("kaupenbow", () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
 
-    public static final RegistryObject<Item> KAUPENSTAFF = ITEMS.register("kaupen_staff", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> KAUPENSTAFF = ITEMS.register("kaupen_staff",() -> new StaffItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
 
     public static final RegistryObject<Item> MUSIC_DISC_BAR_BRAWL = ITEMS.register("music_disc_bar_brawl",
             () -> new RecordItem(1, () -> ModSounds.BAR_BRAWL.get(), new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.TUTORIAL_TAB).rarity(Rarity.RARE)));
