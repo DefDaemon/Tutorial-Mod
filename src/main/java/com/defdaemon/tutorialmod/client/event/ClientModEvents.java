@@ -4,7 +4,7 @@ import com.defdaemon.tutorialmod.TutorialMod;
 import com.defdaemon.tutorialmod.client.renderer.BuffZombieRenderer;
 import com.defdaemon.tutorialmod.client.renderer.PigeonRenderer;
 import com.defdaemon.tutorialmod.client.renderer.model.BuffZombieModel;
-import com.defdaemon.tutorialmod.client.renderer.model.ModBoatRenderer;
+import com.defdaemon.tutorialmod.client.renderer.ModBoatRenderer;
 import com.defdaemon.tutorialmod.client.renderer.model.PigeonModel;
 import com.defdaemon.tutorialmod.core.init.ModEntityTypes;
 import net.minecraftforge.api.distmarker.Dist;

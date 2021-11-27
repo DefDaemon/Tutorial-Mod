@@ -1,9 +1,5 @@
 package com.defdaemon.tutorialmod;
 
-import com.defdaemon.tutorialmod.client.renderer.BuffZombieRenderer;
-import com.defdaemon.tutorialmod.client.renderer.PigeonRenderer;
-import com.defdaemon.tutorialmod.client.renderer.model.ModBoatRenderer;
-import com.defdaemon.tutorialmod.common.entity.ModBoatEntity;
 import com.defdaemon.tutorialmod.common.world.biome.ModBiomes;
 import com.defdaemon.tutorialmod.common.world.biome.ModBiomesDatapack;
 import com.defdaemon.tutorialmod.common.world.gen.ModBiomeGeneration;
@@ -16,14 +12,12 @@ import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -37,9 +31,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import javax.swing.*;
-import java.awt.*;
 
 @Mod(TutorialMod.MOD_ID)
 public class TutorialMod

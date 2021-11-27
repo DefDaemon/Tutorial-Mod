@@ -1,11 +1,7 @@
 package com.defdaemon.tutorialmod.core.event;
 
 import com.defdaemon.tutorialmod.TutorialMod;
-import com.defdaemon.tutorialmod.client.renderer.BuffZombieRenderer;
-import com.defdaemon.tutorialmod.client.renderer.PigeonRenderer;
-import com.defdaemon.tutorialmod.client.renderer.model.ModBoatRenderer;
 import com.defdaemon.tutorialmod.common.entity.BuffZombieEntity;
-import com.defdaemon.tutorialmod.common.entity.ModBoatEntity;
 import com.defdaemon.tutorialmod.common.entity.PigeonEntity;
 import com.defdaemon.tutorialmod.common.events.loot.FirestoneAdditionModifier;
 import com.defdaemon.tutorialmod.common.events.loot.FirestoneStructureAdditionModifier;
