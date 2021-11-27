@@ -4,6 +4,7 @@ import com.defdaemon.tutorialmod.TutorialMod;
 import com.defdaemon.tutorialmod.client.renderer.BuffZombieRenderer;
 import com.defdaemon.tutorialmod.client.renderer.PigeonRenderer;
 import com.defdaemon.tutorialmod.client.renderer.model.BuffZombieModel;
+import com.defdaemon.tutorialmod.client.renderer.model.ModBoatRenderer;
 import com.defdaemon.tutorialmod.client.renderer.model.PigeonModel;
 import com.defdaemon.tutorialmod.core.init.ModEntityTypes;
 import net.minecraftforge.api.distmarker.Dist;
@@ -13,7 +14,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 
 @Mod.EventBusSubscriber(modid = TutorialMod.MOD_ID, bus = Bus.MOD, value = Dist.CLIENT)
-public class ClientModEvents
+public final class ClientModEvents
 {
     private ClientModEvents() { }
 
@@ -29,6 +30,6 @@ public class ClientModEvents
     {
         event.registerEntityRenderer(ModEntityTypes.BUFF_ZOMBIE.get(), BuffZombieRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.PIGEON.get(), PigeonRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.REDWOOD_BOAT.get(), ModBoatRenderer::new);
     }
-
 }

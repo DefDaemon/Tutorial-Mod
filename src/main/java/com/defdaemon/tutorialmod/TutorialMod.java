@@ -1,6 +1,11 @@
 package com.defdaemon.tutorialmod;
 
+import com.defdaemon.tutorialmod.client.renderer.BuffZombieRenderer;
+import com.defdaemon.tutorialmod.client.renderer.PigeonRenderer;
+import com.defdaemon.tutorialmod.client.renderer.model.ModBoatRenderer;
+import com.defdaemon.tutorialmod.common.entity.ModBoatEntity;
 import com.defdaemon.tutorialmod.common.world.biome.ModBiomes;
+import com.defdaemon.tutorialmod.common.world.biome.ModBiomesDatapack;
 import com.defdaemon.tutorialmod.common.world.gen.ModBiomeGeneration;
 import com.defdaemon.tutorialmod.core.init.*;
 import com.defdaemon.tutorialmod.client.screen.LightningChannelerScreen;
@@ -11,12 +16,14 @@ import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,6 +38,9 @@ import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.swing.*;
+import java.awt.*;
+
 @Mod(TutorialMod.MOD_ID)
 public class TutorialMod
 {
@@ -43,16 +53,21 @@ public class TutorialMod
     {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(eventBus);
+        ModSounds.register(eventBus);
         ModBlocks.register(eventBus);
+        ModItems.register(eventBus);
+        ModEntityTypes.register(eventBus);
+
+
         ModBlockEntities.register(eventBus);
         ModContainers.register(eventBus);
         ModStructures.register(eventBus);
         //ModFluids.register(eventBus);
         ModRecipeTypes.register(eventBus);
-        ModSounds.register(eventBus);
-        ModEntityTypes.register(eventBus);
+
+
         ModBiomes.register(eventBus);
+        ModBiomesDatapack.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);
@@ -73,7 +88,6 @@ public class TutorialMod
         });
         ModStructures.setupStructures();
         ModBiomeGeneration.generateBiomes();
-
         SpawnPlacements.register(ModEntityTypes.BUFF_ZOMBIE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Monster::checkMonsterSpawnRules);
         SpawnPlacements.register(ModEntityTypes.PIGEON.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Animal::checkAnimalSpawnRules);
     }

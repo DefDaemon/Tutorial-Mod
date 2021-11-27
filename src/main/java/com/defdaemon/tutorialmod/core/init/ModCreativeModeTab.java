@@ -3,8 +3,10 @@ package com.defdaemon.tutorialmod.core.init;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTab;
 
-public class ModCreativeModeTab
+public final class ModCreativeModeTab
 {
+    private ModCreativeModeTab() { }
+
     public static final CreativeModeTab TUTORIAL_TAB = new CreativeModeTab("tutorialModTab")
     {
         @Override
