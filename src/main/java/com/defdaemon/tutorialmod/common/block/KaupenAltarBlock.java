@@ -1,14 +1,23 @@
 package com.defdaemon.tutorialmod.common.block;
 
 
+import com.defdaemon.tutorialmod.common.world.dimension.KJTeleporter;
+import com.defdaemon.tutorialmod.common.world.dimension.ModDimensions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -86,6 +95,33 @@ public class KaupenAltarBlock extends HorizontalDirectionalBlock
             default:
                 return SHAPE_N;
         }
+    }
+
+    @SuppressWarnings("deprecation")
+    @Override
+    public InteractionResult use(BlockState stateIn, Level levelIn, BlockPos blockPos, Player playerIn, InteractionHand handIn, BlockHitResult hit)
+    {
+        if (!levelIn.isClientSide) {
+            if (!playerIn.isCrouching()) {
+                MinecraftServer server = levelIn.getServer();
+
+                if (server != null) {
+                    if (levelIn.dimension() == ModDimensions.KJDim) {
+                        ServerLevel overWorld = server.getLevel(Level.OVERWORLD);
+                        if (overWorld != null) {
+                            playerIn.changeDimension(overWorld, new KJTeleporter(blockPos, false));
+                        }
+                    } else {
+                        ServerLevel kjDim = server.getLevel(ModDimensions.KJDim);
+                        if (kjDim != null) {
+                            playerIn.changeDimension(kjDim, new KJTeleporter(blockPos, true));
+                        }
+                    }
+                    return InteractionResult.SUCCESS;
+                }
+            }
+        }
+        return super.use(stateIn, levelIn, blockPos, playerIn, handIn, hit);
     }
 
     @Nullable
