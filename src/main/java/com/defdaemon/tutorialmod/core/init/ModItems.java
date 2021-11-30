@@ -3,7 +3,7 @@ package com.defdaemon.tutorialmod.core.init;
 import com.defdaemon.tutorialmod.TutorialMod;
 import com.defdaemon.tutorialmod.common.item.*;
 import com.defdaemon.tutorialmod.common.material.ModArmorMaterial;
-import com.defdaemon.tutorialmod.common.material.ModToolMaterial;
+import com.defdaemon.tutorialmod.common.item.ModTiers;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -64,15 +64,15 @@ public final class ModItems
 
     public static final RegistryObject<Item> FIRESTONE = ITEMS.register("firestone", () -> new Firestone(new Item.Properties().durability(8).tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
-    public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword", () -> new SwordItem(ModToolMaterial.AMETHYST, 2, 3f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+    public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword", () -> new SwordItem(ModTiers.AMETHYST, 2, 3f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
-    public static final RegistryObject<Item> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () -> new PickaxeItem(ModToolMaterial.AMETHYST, 0, -1f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+    public static final RegistryObject<Item> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () -> new PickaxeItem(ModTiers.AMETHYST, 0, -1f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
-    public static final RegistryObject<Item> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", () -> new ShovelItem(ModToolMaterial.AMETHYST, 0, -1f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+    public static final RegistryObject<Item> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", () -> new ShovelItem(ModTiers.AMETHYST, 0, -1f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
-    public static final RegistryObject<Item> AMETHYST_AXE = ITEMS.register("amethyst_axe", () -> new AxeItem(ModToolMaterial.AMETHYST, 4, -6f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+    public static final RegistryObject<Item> AMETHYST_AXE = ITEMS.register("amethyst_axe", () -> new AxeItem(ModTiers.AMETHYST, 4, -6f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
-    public static final RegistryObject<Item> AMETHYST_HOE = ITEMS.register("amethyst_hoe", () -> new HoeItem(ModToolMaterial.AMETHYST, 0, 0f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+    public static final RegistryObject<Item> AMETHYST_HOE = ITEMS.register("amethyst_hoe", () -> new HoeItem(ModTiers.AMETHYST, 0, 0f, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots", () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
@@ -89,14 +89,14 @@ public final class ModItems
     public static final RegistryObject<Item> HAPPY_SEEDS = ITEMS.register("happy_seeds", () -> new ItemNameBlockItem(ModBlocks.HAPPY_CROP.get(), new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
     public static final RegistryObject<Item> HAPPY_CROP = ITEMS.register("happy_crop", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
     public static final RegistryObject<Item> HAPPY_STUFF = ITEMS.register("happy_stuff", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
-    public static final RegistryObject<Item> HAPPY_COOKIE = ITEMS.register("happy_cookie", () -> new Item(new Item.Properties().food(new FoodProperties.Builder().alwaysEat().fast()
+    public static final RegistryObject<Item> PLACEBO_SPECIAL_K = ITEMS.register("placebo_special_k", () -> new Item(new Item.Properties().food(new FoodProperties.Builder().alwaysEat().fast()
             .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 200), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 200), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 200), 1.0f)
             .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 200), 1.0f).build()).tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
-    //public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket", () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(), new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.TUTORIAL_TAB)));
+    public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket", () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(), new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<ForgeSpawnEggItem> BUFF_ZOMBIE_SPAWN_EGG = ITEMS.register("buff_zombie_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.BUFF_ZOMBIE, 0x464F56, 0x1D6336, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(16)));

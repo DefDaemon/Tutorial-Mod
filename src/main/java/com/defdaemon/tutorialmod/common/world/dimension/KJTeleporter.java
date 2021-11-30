@@ -45,7 +45,7 @@ public class KJTeleporter implements ITeleporter
 
         if (insideDimension) {
             boolean doSetBlock = true;
-            for (BlockPos checkPos : BlockPos.betweenClosed(destinationPos.below(10).west(10), destinationPos.above(10).east(10)))
+            for (BlockPos checkPos : BlockPos.betweenClosed(destinationPos.below(0).west(10), destinationPos.above(20).east(10)))
             {
                 if (destinationWorld.getBlockState(checkPos).getBlock() instanceof KaupenAltarBlock) {
                     doSetBlock = false;

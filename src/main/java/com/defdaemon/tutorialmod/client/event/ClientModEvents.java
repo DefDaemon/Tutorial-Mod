@@ -3,6 +3,7 @@ package com.defdaemon.tutorialmod.client.event;
 import com.defdaemon.tutorialmod.TutorialMod;
 import com.defdaemon.tutorialmod.client.renderer.BuffZombieRenderer;
 import com.defdaemon.tutorialmod.client.renderer.PigeonRenderer;
+import com.defdaemon.tutorialmod.client.renderer.SeatRenderer;
 import com.defdaemon.tutorialmod.client.renderer.model.BuffZombieModel;
 import com.defdaemon.tutorialmod.client.renderer.ModBoatRenderer;
 import com.defdaemon.tutorialmod.client.renderer.model.PigeonModel;
@@ -31,5 +32,6 @@ public final class ClientModEvents
         event.registerEntityRenderer(ModEntityTypes.BUFF_ZOMBIE.get(), BuffZombieRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.PIGEON.get(), PigeonRenderer::new);
         event.registerEntityRenderer(ModEntityTypes.REDWOOD_BOAT.get(), ModBoatRenderer::new);
+        event.registerEntityRenderer(ModEntityTypes.SEAT.get(), SeatRenderer::new);
     }
 }

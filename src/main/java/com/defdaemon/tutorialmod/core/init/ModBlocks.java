@@ -26,6 +26,8 @@ public final class ModBlocks
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
 
+    public static final RegistryObject<ToiletBlock> TOILET = registerBlock("toilet", () -> new ToiletBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK).requiresCorrectToolForDrops().noOcclusion().dynamicShape()), ModCreativeModeTab.TUTORIAL_TAB);
+
     // From 1.17.1 tutorial
     public static final RegistryObject<Block> TITANIUM_BLOCK = registerBlock("titanium_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f).requiresCorrectToolForDrops()), "tooltip.block.tutorialmod.block");
 
